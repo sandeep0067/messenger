@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App with Video Calls</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Chat App</h2>
+    
+    <!-- Auth Section -->
+    <div id="auth">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <div class="auth-buttons">
+        <button id="signupBtn">Sign Up</button>
+        <button id="loginBtn">Log In</button>
+      </div>
+      <div id="authMessage"></div>
+    </div>
+    
+    <!-- Chat Section -->
+    <div id="chat" style="display: none;">
+      <div class="user-info">
+        Logged in as: <span id="currentUser"></span>
+        <button id="logoutBtn">Log Out</button>
+      </div>
+      
+      <div class="chat-header">
+        <input type="email" id="receiver" placeholder="Recipient's email">
+        <button id="startCallBtn" title="Start video call">📹</button>
+      </div>
+      
+      <div id="messages"></div>
+      
+      <div class="message-input-container">
+        <input type="text" id="message" placeholder="Type your message...">
+        <button id="sendBtn">Send</button>
+      </div>
+      
+      <!-- Video Call Section -->
+      <div id="videoCallContainer" style="display: none;">
+        <div class="video-container">
+          <video id="localVideo" autoplay muted></video>
+          <video id="remoteVideo" autoplay></video>
+        </div>
+        <div class="call-controls">
+          <button id="endCallBtn">End Call</button>
+          <button id="toggleAudioBtn">Mute</button>
+          <button id="toggleVideoBtn">Hide Video</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  
+  <!-- Your scripts -->
+  <script src="firebase-config.js"></script>
+  <script src="video-call.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

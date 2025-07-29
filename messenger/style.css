@@ -1,0 +1,198 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input, button {
+  width: 100%;
+  margin: 6px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #1976d2;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  flex: 1;
+}
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.chat-header input {
+  flex: 1;
+  margin: 0;
+}
+
+.message-input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.message-input-container input {
+  flex: 1;
+  margin: 0;
+}
+
+.message-input-container button {
+  width: auto;
+  padding: 10px 20px;
+  margin: 0;
+}
+
+#messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.sent {
+  background: #2196f3;
+  color: white;
+  margin-left: auto;
+  text-align: right;
+}
+
+.message.received {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.message-sender {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+
+.message-text {
+  font-size: 14px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.success {
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #666;
+}
+/* Video Call Styles */
+#videoCallContainer {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  background: #f9f9f9;
+}
+
+.video-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.video-container video {
+  width: 48%;
+  height: auto;
+  max-height: 300px;
+  background: #000;
+  border-radius: 4px;
+}
+
+.call-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.call-controls button {
+  width: auto;
+  padding: 10px 15px;
+}
+
+#localVideo {
+  transform: scaleX(-1); /* Mirror effect for self-view */
+}
+
+#startCallBtn {
+  width: auto;
+  padding: 10px;
+  background: #4CAF50;
+}
+
+#startCallBtn:hover {
+  background: #388E3C;
+}
+
+.call-status {
+  text-align: center;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #2196F3;
+}
